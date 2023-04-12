@@ -16,8 +16,15 @@ spec:
     spec:
       containers:
       - name: udagram-frontend
-        image: ozieblomichal/udagram-frontend:v3
+        image: ozieblomichal/udagram-frontend:v9
+        imagePullPolicy: Always          
         ports:
         - containerPort: 80
-
-
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "2048Mi"
+            cpu: "500m"               
+      restartPolicy: Always

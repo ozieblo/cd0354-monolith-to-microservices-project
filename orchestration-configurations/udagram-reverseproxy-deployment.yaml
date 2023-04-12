@@ -16,6 +16,15 @@ spec:
     spec:
       containers:
       - name: udagram-reverseproxy
-        image: ozieblomichal/udagram-reverseproxy:v2
+        image: ozieblomichal/udagram-reverseproxy:v4
+        imagePullPolicy: Always          
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "2048Mi"
+            cpu: "500m"   
         ports:
-        - containerPort: 80
+        - containerPort: 8080
+      restartPolicy: Always
