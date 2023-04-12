@@ -29,5 +29,5 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   # - docker push ozieblomichal/udagram-api-feed:v4
   # - docker push ozieblomichal/udagram-api-user:v4
-  - docker push ozieblomichal/udagram-frontend:v8
+  - docker push ozieblomichal/udagram-frontend:v9
   # - docker push ozieblomichal/udagram-reverseproxy:v4
